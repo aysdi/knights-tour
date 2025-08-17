@@ -1,0 +1,34 @@
+:root {
+    --white-square-color: #f2dab5;
+    --black-square-color: #b68767;
+    --board-border-color: #887f6c;
+}
+
+.game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.board {
+    width: 400px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    border: 2px solid var(--board-border-color);
+    border-radius: 5px
+}
+
+.square {
+    width: 50px;
+    height: 50px;
+}
+
+.white {
+    background-color: var(--white-square-color);
+}
+
+.black {
+    background-color: var(--black-square-color);
+}
