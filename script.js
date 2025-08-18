@@ -22,4 +22,33 @@ document.addEventListener("DOMContentLoaded", () => {
             board.appendChild(square);
         }
     }
+
+    const resetButton = document.getElementById("reset-button");
+
+    resetButton.addEventListener("click", () => {
+        const knight = document.querySelector(".knight");
+        if (knight) {
+            knight.remove();
+        }
+    });
+
+    board.addEventListener("click", (event) => {
+        if (event.target.classList.contains("square")) {
+            const knight = document.querySelector(".knight");
+            if (knight) {
+                knight.remove();
+            }
+            
+            placeKnight(event.target);
+        }
+    });
+
 });
+
+function placeKnight(square) {
+    const knightImg = document.createElement("img");
+    knightImg.src = "pixel-knight.png";
+    knightImg.classList.add("knight");
+    square.appendChild(knightImg);
+}
+
