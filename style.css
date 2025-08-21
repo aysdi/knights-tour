@@ -38,6 +38,7 @@ h1 {
 }
 
 .square {
+    position: relative;
     width: 50px;
     height: 50px;
 }
@@ -51,12 +52,49 @@ h1 {
 }
 
 .white {
-    background-color: var(--white-square-color);
+    background-image: url("images/whiteSquare.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
 }
 
 .black {
-    background-color: var(--black-square-color);
+    background-image: url("images/blackSquare.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
 }
+
+.highlight-overlay {
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    width: calc(105% + 6px);
+    height: calc(105% + 6px);
+    pointer-events: none;
+    z-index: 2;
+    image-rendering: pixelated;
+}
+
+.has-knight .square:not(.highlight):not(.visited):not(.knight) {
+    cursor: not-allowed;
+}
+
+.square.highlight:hover {
+    outline: 2px solid limegreen;
+}
+
+.move-number {
+    position: absolute;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: red;
+    bottom: 2px;
+    right: 4px;
+    pointer-events: none;
+    z-index: 2;
+}
+
 
 #reset-button {
     margin-top: 10px;
@@ -71,4 +109,19 @@ h1 {
 
 #reset-button:hover {
     background-color: #a07458;
+}
+
+.message {
+    text-align: center;
+    margin-top: 16px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.message.error {
+    color: red;
+}
+
+.message.success {
+    color: green;
 }
