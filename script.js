@@ -103,7 +103,7 @@ function visitSquare(square) {
 
 function placeKnight(square) {
     const knightImg = document.createElement("img");
-    knightImg.src = "images/pixel-knight.png";
+    knightImg.src = "assets/pixel-knight.png";
     knightImg.classList.add("knight");
     square.appendChild(knightImg);
 }
@@ -128,7 +128,7 @@ function highlightLegalMoves(row, col) {
             if (targetSquare && !isSquareVisited(targetSquare)) {
                 targetSquare.classList.add("highlight");
                 const overlay = document.createElement("img");
-                overlay.src = "images/highlightViable.png";
+                overlay.src = "assetsassets/highlightViable.png";
                 overlay.classList.add("highlight-overlay");
                 targetSquare.appendChild(overlay);
                 anyMoves = true;

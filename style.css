@@ -52,14 +52,14 @@ h1 {
 }
 
 .white {
-    background-image: url("images/whiteSquare.png");
+    background-image: url("assets/whiteSquare.png");
     background-size: cover;
     background-repeat: no-repeat;
     image-rendering: pixelated;
 }
 
 .black {
-    background-image: url("images/blackSquare.png");
+    background-image: url("assets/blackSquare.png");
     background-size: cover;
     background-repeat: no-repeat;
     image-rendering: pixelated;
